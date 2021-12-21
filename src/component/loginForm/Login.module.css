@@ -1,0 +1,110 @@
+.loginForm {
+  width: 65%;
+  height: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  background-color: rgba(65, 105, 225, 0);
+  backdrop-filter: blur(15px);
+  border-radius: 0 6px 6px 0;
+  position: relative;
+  z-index: 1;
+}
+.loginForm h1 {
+  width: 100%;
+  text-align: center;
+  animation: showLogin ease-in-out 1s;
+  align-self: center;
+  user-select: none;
+}
+/* style form */
+.loginForm form {
+  width: 100%;
+  height: 35%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  animation: showLogin ease-in-out 1s;
+}
+/* style inputs */
+.loginForm .inputGroup {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(241, 241, 241);
+}
+.loginForm .inputGroup:not(:last-child) {
+  border-bottom: 1px solid rgba(209, 209, 209, 0.295);
+}
+.inputGroup .input {
+  width: 95%;
+  height: 35px;
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+  padding: 0px 10px;
+  color: white;
+}
+.inputGroup .input::placeholder {
+  color: rgb(241, 241, 241);
+}
+.inputGroup .input:focus {
+  outline: none;
+}
+/* style form button */
+.loginForm .inputGroup .button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ebebeb1e;
+  border: 2px solid rgba(209, 209, 209, 0.541);
+  transition: all ease-in-out 200ms;
+  font-size: 16px;
+  cursor: pointer;
+}
+.loginForm .inputGroup .button:hover {
+  background-color: #4286f4;
+  border-color: #4286f4;
+  color: white;
+}
+.loginForm .inputGroup .button:disabled {
+  cursor: not-allowed;
+  background-color: #ebebeb1e;
+  border: 2px solid rgba(209, 209, 209, 0.541);
+}
+.loginForm .inputGroup .button:hover:disabled {
+  border-color: #db4437;
+  color: rgba(117, 117, 117, 0.678);
+}
+/* style for validate */
+.notValid {
+  color: #db4437;
+  animation: check ease-in 280ms;
+}
+.valid {
+  color: #0f9d58;
+  animation: check ease-in 280ms;
+}
+@keyframes showLogin {
+  from {
+    /* transform: translateX(-65%); */
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    /* transform: translateX(0); */
+  }
+}
+@keyframes check {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

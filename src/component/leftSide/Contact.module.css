@@ -1,0 +1,105 @@
+.contact {
+  width: 100%;
+  height: 60px;
+  padding: 7px 5px;
+  display: grid;
+  grid-template-columns: 20% 57% 23%;
+  margin: 0px 0px;
+  border-bottom: 1px solid rgba(109, 109, 109, 0.116);
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+/* for change background selected contact */
+.contact.selectContact {
+  background-color: rgba(66, 134, 244, 0.151);
+}
+.contact .avatar {
+  height: 100%;
+  display: flex;
+  justify-self: start;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.avatar img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  /* border: 2px solid white; */
+}
+.avatar .online {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #db4437;
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+}
+.contact .name {
+  align-self: center;
+}
+.name h2 {
+  font-size: 16px;
+  color: rgb(34, 34, 34);
+}
+.name .typing {
+  font-size: 12px;
+  color: rgb(66, 134, 244);
+}
+.name .lastMessage {
+  font-size: 12px;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.contact .notif-time {
+  height: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.notif-time .lastMTime {
+  height: 45%;
+  padding: 0px 2px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 11px;
+  color: #3a3a3a;
+}
+.notif-time .badge {
+  width: 35px;
+  height: 17px;
+  border-radius: 7px;
+  background-color: white;
+  color: rgb(53, 53, 53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* change color content of contact by hover */
+.contact:hover {
+  background-color: rgb(66, 134, 244);
+  border-radius: 6px;
+}
+.contact:hover .name .lastMessage {
+  color: white;
+}
+.contact:hover .name h2 {
+  color: white;
+}
+.contact:hover .notif-time .lastMTime {
+  color: white;
+}
+
+.avatar .isOnline {
+  background-color: rgb(0, 179, 0);
+}

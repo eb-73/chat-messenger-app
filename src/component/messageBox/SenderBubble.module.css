@@ -1,0 +1,63 @@
+.senderBubble {
+  width: 100%;
+  min-height: 24%;
+  max-height: 60%;
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  grid-template-rows: 1fr;
+}
+.senderBubble .avatar {
+  justify-self: center;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.senderBubble .avatar h6 {
+  text-align: center;
+  font-size: 8px;
+  font-weight: bold;
+}
+.avatar img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.avatar .messageTime {
+  font-size: 9px;
+  color: rgb(48, 48, 48);
+}
+.senderBubble .message {
+  justify-self: end;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 50%;
+  max-height: 95%;
+  background-color: rgb(66, 133, 244);
+  border-radius: 6px 6px 0px 6px;
+  word-break: break-all;
+  padding: 10px 8px;
+  color: white;
+  font-size: 11px;
+  animation: apeearChat ease 0.4s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.senderBubble .message img {
+  max-height: 90%;
+  max-width: 100%;
+  border-radius: 5px;
+}
+@keyframes apeearChat {
+  from {
+    transform: scale(0.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}

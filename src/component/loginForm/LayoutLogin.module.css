@@ -1,0 +1,8 @@
+.main {
+  width: 887px;
+  height: 500px;
+  border-radius: 6px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}

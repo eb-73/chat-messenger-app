@@ -1,0 +1,38 @@
+.searchBox {
+  width: 100%;
+  height: 10%;
+  padding: 10px 5px;
+}
+
+.searchBox .inputGroup {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(66, 134, 244, 0.308);
+  border-radius: 6px;
+}
+.searchBox .inputGroup:hover {
+  background-color: rgba(66, 134, 244, 0.514);
+}
+.inputGroup .searchIcon {
+  color: white;
+  font-size: 16px;
+}
+.inputGroup input {
+  width: 90%;
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 121, 151, 0);
+  border: none;
+  height: 30px;
+  color: white;
+}
+.inputGroup input:focus {
+  outline: none;
+}
+
+.inputGroup input::placeholder {
+  color: white;
+  font-size: 11px;
+}

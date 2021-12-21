@@ -1,0 +1,37 @@
+.sideForm {
+  width: 35%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background: url("../../Assets/image/backForm.jpg");
+  border-radius: 6px 0 0 6px;
+  position: relative;
+  z-index: 2;
+}
+.sideForm h1 {
+  font-family: cursive;
+  color: black;
+  font-size: 36px;
+  user-select: none;
+  justify-self: center;
+  align-self: center;
+}
+
+.sideForm button {
+  justify-self: center;
+  align-self: start;
+  border: none;
+  width: 70%;
+  height: 50px;
+  border-radius: 9px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
+  font-size: 19px;
+  color: black;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+.sideForm button:hover {
+  width: 78%;
+}

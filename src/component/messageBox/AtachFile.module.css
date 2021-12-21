@@ -1,0 +1,89 @@
+.atachFile {
+  width: 100%;
+  height: 90%;
+  overflow-y: auto;
+  background-color: rgba(0, 82, 158, 0.349);
+  animation: appear ease 0.5s;
+}
+.atachFile .imagePreview {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+.imagePreview img {
+  align-self: center;
+  justify-self: center;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.imagePreview .exit {
+  justify-self: start;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  font-size: 26px;
+  cursor: pointer;
+  color: rgb(82, 82, 82);
+}
+.typeBox {
+  width: 100%;
+  height: 10%;
+  background-color: rgba(221, 221, 221, 0.466);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.typeBox .inputGroup {
+  width: 89%;
+  height: 70%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+}
+.typeBox .inputGroup input {
+  width: 95%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  border: none;
+  padding: 0 10px;
+}
+.typeBox .inputGroup input:focus {
+  outline: none;
+}
+.typeBox .send {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: rgb(78, 78, 78);
+  cursor: pointer;
+  transition: background-color ease 100ms;
+}
+.typeBox .send:hover {
+  background-color: rgb(207, 207, 207);
+  color: rgb(48, 48, 48);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

@@ -1,0 +1,131 @@
+.contactDetail {
+  width: 25%;
+  height: 100%;
+  border-radius: 0px 6px 6px 0px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 35% 5% 5% 45%;
+  /* animation: contentDetail ease-in-out 300ms; */
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.contactDetail .dismis {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  justify-self: end;
+  margin-right: 5px;
+}
+.dismis .closeIcon {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  color: rgb(87, 87, 87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dismis .closeIcon:hover {
+  background-color: rgba(87, 87, 87, 0.123);
+}
+.contactDetail .userImage {
+  align-self: center;
+  justify-self: center;
+}
+.contactDetail .userImage img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.contactDetail .name {
+  align-self: center;
+  justify-self: center;
+  color: rgb(53, 53, 53);
+  user-select: none;
+}
+.contactDetail .onlineStatus {
+  align-self: center;
+  justify-self: center;
+  color: rgb(53, 53, 53);
+  user-select: none;
+}
+.contactDetail .information {
+  width: 200px;
+  align-self: center;
+  justify-self: start;
+  color: rgb(53, 53, 53);
+}
+.information .phone {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.phone .phoneIcon {
+  width: 20%;
+  text-align: center;
+}
+.phone p {
+  width: 80%;
+}
+.information .email {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.email .emailIcon {
+  width: 20%;
+  text-align: center;
+}
+.email p {
+  width: 80%;
+}
+.onlineStatus.isOnline {
+  color: rgb(0, 179, 0);
+}
+.onlineStatus.isOffline {
+  color: rgb(219, 69, 55);
+}
+.userImage .isOnline {
+  animation: online ease 1.5s alternate infinite;
+}
+.userImage .isOffline {
+  animation: ofline ease 1.5s alternate infinite;
+}
+/* @keyframes contentDetail {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+} */
+@keyframes online {
+  from {
+    border-color: rgba(0, 179, 0, 0.192);
+  }
+  to {
+    border-color: rgba(0, 179, 0, 0.479);
+    box-shadow: rgba(0, 179, 0, 0.479) 0px 25px 50px -12px;
+  }
+}
+@keyframes ofline {
+  from {
+    border-color: rgba(219, 69, 55, 0.288);
+  }
+  to {
+    border-color: rgba(219, 69, 55, 0.699);
+    box-shadow: rgba(219, 69, 55, 0.699) 0px 25px 50px -12px;
+  }
+}

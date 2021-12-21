@@ -1,0 +1,24 @@
+.contentDetail-enter-active {
+  animation: contentDetailShow ease 700ms;
+}
+.contentDetail-exit-active {
+  animation: contentDetailHide ease 1500ms;
+}
+
+@keyframes contentDetailShow {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes contentDetailHide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+    width: 0;
+  }
+}
