@@ -35,7 +35,7 @@ function AtachFile(props) {
       to: toUserID,
       text: textValue,
       imgUrl: downloadUrl,
-      createdAt: new Date().toString(),
+      createdAt: Timestamp.fromDate(new Date()),
     });
     //set last message
     const refLastM = doc(db, "lastMessage", messageID);
@@ -44,7 +44,7 @@ function AtachFile(props) {
       to: toUserID,
       text: textValue,
       imgUrl: downloadUrl,
-      createdAt: new Date().toString(),
+      createdAt: Timestamp.fromDate(new Date()),
       unRead: true,
     });
     props.onExit();

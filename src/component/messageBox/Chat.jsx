@@ -42,7 +42,7 @@ function Chat() {
         return (
           <SenderBubble
             key={message.uID}
-            createdAt={message.createdAt}
+            createdAt={message.createdAt.toDate()}
             messageContent={message.text}
             image={message.imgUrl}
           />
@@ -51,7 +51,7 @@ function Chat() {
         return (
           <RecieverBubble
             key={message.uID}
-            createdAt={message.createdAt}
+            createdAt={message.createdAt.toDate()}
             messageContent={message.text}
             image={message.imgUrl}
           />

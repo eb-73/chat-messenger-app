@@ -56,7 +56,7 @@ function TypeBox(props) {
         from: currentUserID,
         to: toUserID,
         text: textValue,
-        createdAt: new Date().toString(),
+        createdAt: Timestamp.fromDate(new Date()),
       });
       //set last message
       const refLastM = doc(db, "lastMessage", messageID);
@@ -64,7 +64,7 @@ function TypeBox(props) {
         from: currentUserID,
         to: toUserID,
         text: textValue,
-        createdAt: new Date().toString(),
+        createdAt: Timestamp.fromDate(new Date()),
         unRead: true,
       });
     }

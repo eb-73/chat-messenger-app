@@ -40,7 +40,7 @@ function Contact(props) {
         setLastMessage({
           id: snapshot.data().from,
           text: snapshot.data().text,
-          time: snapshot.data().createdAt,
+          time: snapshot.data().createdAt.toDate(),
         });
 
         if (snapshot.data().to === currentUserID) {
