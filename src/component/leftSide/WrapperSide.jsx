@@ -8,7 +8,6 @@ function WrapperSide() {
   const showProfile = useSelector((state) => state.Toggle.showProfile);
   return (
     <div className={`${style.wrapperSide} ${showDetail && style.animate}`}>
-      {/* {!showProfile && <Side contacts />} */}
       <CSSTransition
         in={!showProfile}
         timeout={{

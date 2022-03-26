@@ -10,23 +10,12 @@ function Chat() {
   const [messages, setMessages] = useState([]);
   const currentUserID = auth.currentUser.uid;
   const toUserID = useSelector((state) => state.ChatWith.to);
+  // create message id by combine sender's id and receiver's id
   let messageID =
     currentUserID > toUserID
       ? `${currentUserID + toUserID}`
       : `${toUserID + currentUserID}`;
-  //listen to typing state for sender message
-  // useEffect(() => {
-  //   const ref = doc(db, "users", props.id);
-  //   const unsubscribe = onSnapshot(ref, (userDetail) => {
-  //     if (userDetail.exists()) {
-  //       console.log("typing", userDetail.data().typing);
-  //       setTyping(userDetail.data().typing);
-  //     }
-  //   });
-  //   return () => {
-  //     unsubscribe();
-  //   };
-  // }, []);
+  // get conversation between to user in database
   useEffect(() => {
     const ref = collection(db, "messages", messageID, "chat");
     const q = query(ref, orderBy("createdAt", "asc"));

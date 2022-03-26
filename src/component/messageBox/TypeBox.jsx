@@ -48,7 +48,7 @@ function TypeBox(props) {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     setTextValue("");
-    // for unable to send space message
+    // check to unable send space message
     if (textValue) {
       //set message document in collection
       const ref = collection(db, "messages", messageID, "chat");

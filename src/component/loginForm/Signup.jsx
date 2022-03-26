@@ -62,7 +62,7 @@ function Signup() {
     clearEmail();
     clearFirstPass();
     clearSecoundPass();
-
+    //handle signup promise with toast package
     toast.promise(signupUser(nameValue, emailValue, secoundPassValue), {
       loading: "Loading",
       success: (data) => {

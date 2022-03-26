@@ -23,9 +23,7 @@ function Menu(props) {
   };
   const outSideClick = (e) => {
     e.stopPropagation();
-    if (e.target === menu.current) {
-      console.log("naa");
-    } else {
+    if (e.target !== menu.current) {
       props.closeMenu();
     }
   };

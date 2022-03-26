@@ -18,6 +18,7 @@ function Profile() {
   const [imageInput, setImageInput] = useState(null);
   const dispatch = useDispatch();
   const currentUserID = auth.currentUser.uid;
+  //get user info from database
   useEffect(() => {
     const ref = doc(db, "users", currentUserID);
     const unSubscribe = onSnapshot(ref, (userData) => {
@@ -37,14 +38,9 @@ function Profile() {
   const hideProfileHandler = () => {
     dispatch(toggleAction.hideProfile());
   };
+  //change profile picture
   const setImageHandler = async (e) => {
     setImageInput(e.target.files[0]);
-    // const file = e.target.files[0];
-    // if (file) {
-    //   const blah = URL.createObjectURL(file);
-    //   console.log(blah);
-    // }
-
     const imageRef = ref(
       storage,
       `avatar/${currentUserID}/${currentUserID}-profilePhoto`

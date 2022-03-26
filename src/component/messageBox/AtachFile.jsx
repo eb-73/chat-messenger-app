@@ -10,6 +10,7 @@ function AtachFile(props) {
   const currentUserID = auth.currentUser.uid;
   const [textValue, setTextValue] = useState("");
   const toUserID = useSelector((state) => state.ChatWith.to);
+  // create message id by combine sender's id and receiver's id
   let messageID =
     currentUserID > toUserID
       ? `${currentUserID + toUserID}`

@@ -38,6 +38,7 @@ function Login() {
     }
     clearEmail();
     clearPass();
+    //handle login promise with toast package
     toast.promise(loginUser(null, emailValue, passValue), {
       loading: "Loading",
       success: (data) => {

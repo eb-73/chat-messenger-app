@@ -26,10 +26,9 @@ function Header() {
   const { name: userName, to: toUserID } = useSelector(
     (state) => state.ChatWith
   );
-
+  //get last seen and onlineStatus from database
   useEffect(() => {
     let online = false;
-
     const unsubscribe = onSnapshot(doc(db, "users", toUserID), (snapshot) => {
       if (snapshot.exists()) {
         // console.log("dfds", snapshot.data().lastSeen.toDate());
@@ -43,6 +42,7 @@ function Header() {
       unsubscribe();
     };
   }, [toUserID]);
+  //show user detail by click
   const showDetailHandler = () => {
     dispatch(toggleAction.showDetail());
   };

@@ -20,6 +20,7 @@ function ContactDetail() {
     picUrl: null,
   });
   const userID = useSelector((state) => state.ChatWith.to);
+  //get user info from database
   useEffect(() => {
     const ref = doc(db, "users", userID);
     onSnapshot(ref, (userD) => {

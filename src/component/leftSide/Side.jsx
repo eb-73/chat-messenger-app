@@ -3,7 +3,6 @@ import Contact from "./Contact";
 import style from "./Side.module.css";
 import Nav from "./Nav";
 import Search from "./Search";
-import { useSelector } from "react-redux";
 import { onSnapshot, query, where, collection } from "firebase/firestore";
 import { auth, db } from "../../firebase/config";
 let listOfContact;
@@ -14,7 +13,6 @@ function Side() {
     const ref = collection(db, "users");
     const q = query(ref, where("uID", "not-in", [auth.currentUser.uid]));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      console.log("typing");
       const contacts = [];
       querySnapshot.forEach((doc) => {
         contacts.push(doc.data());
@@ -27,6 +25,7 @@ function Side() {
       unsubscribe();
     };
   }, []);
+  // find user in search bar
   const onSearchHandler = (word) => {
     const filtredList = listOfContact.filter((contact) =>
       contact.name.toLowerCase().includes(word)

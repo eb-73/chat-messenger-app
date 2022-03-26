@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react";
 import Moment from "react-moment";
 const RecieverBubble = (props) => {
   const elementInView = useRef(null);
+  //scroll to last message automatically by fetch message
   useEffect(() => {
     elementInView.current?.scrollIntoView({ behavior: "smooth" });
   }, [props.messageContent]);
